@@ -25,6 +25,14 @@ public class QueueStackLab {
     System.out.println("----- array -----");
     print(cupcakeNameArray);
 
+    // print queue
+   System.out.println("----- queue -----");
+   print(cupcakeNameArray);
+
+   // print stack
+  System.out.println("----- stack -----");
+  print(cupcakeNameArray);
+
     // add each cupcake to a queue
     copyToQueue(cupcakeNameArray);
     printAndEmptyQueue();
@@ -83,4 +91,5 @@ public class QueueStackLab {
      * students should use a stacks pop method
      */
   }
+  
 }
