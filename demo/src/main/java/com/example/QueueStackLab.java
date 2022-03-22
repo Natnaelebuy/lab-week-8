@@ -7,6 +7,8 @@ public class QueueStackLab {
 
   private static Queue<String> cupcakeQueue = new LinkedList<String>();
   private static Stack<String> cupcakeStack = new Stack<String>();
+  private static Collection<String> cupcaNameArray;
+  private static LinkedList<String> cupcakeNameArray;
 
   public static void main(String[] args) {
     String fileName =
@@ -35,11 +37,11 @@ public class QueueStackLab {
 
     // add each cupcake to a queue
     copyToQueue(cupcakeNameArray);
-    printAndEmptyQueue();
+    printAndEmptyQueue(cupcakeNameArray);
 
     // add each cupcake to a stack
     copyToStack(cupcakeNameArray);
-    printAndEmptyStack();
+    printAndEmptyQueue(cupcakeNameArray);
   }
 
   // get array of cupcake names
@@ -64,32 +66,37 @@ public class QueueStackLab {
 
   // copy cupcakes to the queue
   public static void copyToQueue(ArrayList<String> cupcakeNameArray) {
-    /*
-     * write the code for this method
-     */
+    for (int i = 0; i < cupcaNameArray.size(); i++){
+      System.out.printf("%04d\t%s\n", i , cupcakeNameArray.get(i));
+    }
+    
   }
 
   // prints and empties the queue
-  public static void printAndEmptyQueue() {
-    /*
-     * write the code for this method
-     * students should use a queues remove method
-     */
+  public static void printAndEmptyQueue(ArrayList<String> cupcakeNameArrayList) {
+    int sizeof = cupcaNameArray.size();
+    for (int i = 0; i < sizeof; i ++){
+      System.out.printf("%04d\t%s\n", i , cupcakeNameArray.get(0));
+      cupcaNameArray.remove(0);
+    }
+    
   }
 
   // copy cupcakes to the stack
   public static void copyToStack(ArrayList<String> cupcakeNameArray) {
-    /*
-     * write the code for this method
-     */
+    for ( int i = 0; i < cupcakeNameArray.size(); i++){
+      System.out.printf("%04d\t%s\n", i , cupcakeNameArray.get(i));
+    }
   }
 
   // prints and empties the queue
-  public static void printAndEmptyStack() {
-    /*
-     * write the code for this method
-     * students should use a stacks pop method
-     */
+  public static void printAndEmptyStack(ArrayList<String> cupcaArrayList) {
+    int sizeof = cupcaNameArray.size();
+    for (int i = sizeof; i > 0; i-- ){
+      System.out.printf("%04d\t%s\n", i , cupcakeNameArray.get(-1));
+      cupcaNameArray.remove(-i);
+    }
+    
   }
   
 }
