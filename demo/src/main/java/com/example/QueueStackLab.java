@@ -10,7 +10,7 @@ public class QueueStackLab {
 
   public static void main(String[] args) {
     String fileName =
-      "C:/Users/jerom/Documents/GitHub/class-java/queue-stack-lab/lab/src/main/java/com/example/cupcake_test_10.json";
+      "/Users/natnaelebuy/Documents/GitHub/Githubnatnael/lab-week-8/demo/src/main/java/com/example/cupcake_test_10.json";
 
     // read cupcake names
     JSONArray cupcakeArray = JSONFile.readArray(fileName);
